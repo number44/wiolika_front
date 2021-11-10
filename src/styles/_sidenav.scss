@@ -1,0 +1,23 @@
+#sidenav {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	width: 300px;
+	background: white;
+	height: calc(100vh - 60px);
+	z-index: 12;
+	overflow-y: auto;
+	text-transform: uppercase;
+	font-weight: 900;
+	text-decoration: none !important;
+}
+.overlay {
+	z-index: 11;
+	position: fixed;
+	width: 100vw;
+	height: calc(100vh - 60px);
+	left: 0;
+	bottom: 0;
+	background: #2c2c2c;
+	opacity: 0.3;
+}

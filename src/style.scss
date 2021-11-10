@@ -1,0 +1,57 @@
+@use './styles/scroll';
+@use './styles/navbar';
+@use './styles/hero';
+@use './styles/sidenav';
+@use './styles/numbers';
+@use './styles/footer';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+	scroll-behavior: smooth;
+}
+img {
+	max-width: 100%;
+}
+a {
+	text-decoration: none;
+}
+.flex-line {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+a {
+	color: #2c2c2c;
+	transition: all ease-in-out 0.3s;
+	&:hover {
+		color: var(--primary);
+	}
+}
+.btn {
+	padding: 10px 20px;
+	background: var(--primary);
+	border-radius: 5px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: white;
+	font-weight: 600;
+	font-size: 0.8rem;
+}
+.btn-second {
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 0.8rem;
+	border: var(--primary) solid 2px;
+	background: white;
+	border-radius: 5px;
+}
+.bg-primary {
+	background: var(--primary);
+}

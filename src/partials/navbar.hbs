@@ -1,0 +1,53 @@
+<header class='fixed top-0 shadow w-full bg-white'>
+	<nav class='flex-line px-2 h-full nav container mx-auto'>
+		<a href='#' class='brand flex-line p-1'>
+			<img
+				class='h-16'
+				src='/Logo.png'
+				alt='Wiolika
+			Logo'
+			/>
+			<span class='ml-2 font-extrabold text-2xl'>Wiolika.pl</span>
+		</a>
+		<ul>
+			<li><a class='w-full center flex py-4 shadow' href=''>Home</a></li>
+			<li><a class='w-full center flex py-4 shadow' href=''>O nas</a></li>
+			<li><a class='w-full center flex py-4 shadow' href=''>Oferty</a></li>
+			<li><a class='w-full center flex py-4 shadow' href=''>Kontakt</a></li>
+		</ul>
+		<div x-data='{ open: false }' id='hamburger' class='center cursor-pointer'>
+			<div @click='open = !open'>
+				<svg
+					class='h-6 w-6'
+					fill='none'
+					viewBox='
+				0 0 24 24'
+					stroke='currentColor'
+				>
+					<path
+						stroke-linecap='round'
+						stroke-linejoin='round'
+						stroke-width='2'
+						d='M4 6h16M4 12h16M4 18h16'
+					></path>
+				</svg>
+			</div>
+			<nav id='sidenav' class='shadow' x-show='open' x-transition.opacity>
+				<ul class='list-none'>
+					<li><a class='w-full center flex py-4 center' href=''>
+							<img
+								class='h-16'
+								src='{{resolve-from-root 'Logo.png'}}'
+								alt='Wiolika Logo'
+							/>
+						</a></li>
+					<li><a class='w-full center flex py-4 shadow' href=''>Home</a></li>
+					<li><a class='w-full center flex py-4 shadow' href=''>O nas</a></li>
+					<li><a class='w-full center flex py-4 shadow' href=''>Oferty</a></li>
+					<li><a class='w-full center flex py-4 shadow' href=''>Kontakt</a></li>
+				</ul>
+			</nav>
+			<div class='overlay' x-show='open' @click='open = !open'></div>
+		</div>
+	</nav>
+</header>

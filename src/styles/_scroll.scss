@@ -1,0 +1,17 @@
+.scroll-indicator {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 3px;
+	background: #ddd;
+	z-index: 25;
+	.indicator {
+		position: fixed;
+		left: 0;
+		top: 0;
+		height: 4px;
+		border-radius: 3px;
+		background: var(--primary);
+	}
+}
